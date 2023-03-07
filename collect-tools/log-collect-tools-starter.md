@@ -87,5 +87,4 @@ log:
    </mirror>
    ```
    
-   ---
-   部署：mvn deploy:deploy-file -DgroupId=com.log -DartifactId=collect-tools-starter -Dversion=0.0.1 -Dpackaging=jar -Dfile=D:\workingspace\log-sys\collect-tools\build\libs\collect-tools-starter-0.0.1.jar -Durl=http://deploy:deploy123@123.56.23.53:8081/nexus/content/repositories/releases/ 
+   
