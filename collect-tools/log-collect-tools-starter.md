@@ -72,8 +72,8 @@ log:
    <!--公司私库信息添加在servers节点内-->
    <server>
           <id>releases</id>
-          <username>deploy</username>
-          <password>deploy123</password>
+          <username>xxxx</username>
+          <password>xxxx</password>
    </server>
    ```
 
