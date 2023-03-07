@@ -64,29 +64,38 @@ log:
 
 ### 说明项
 
-1. 公司仓库配置
+* 公司仓库配置（有两种配置方式）
 
-   在settings.xml中添加配置项：
+  1. 在settings.xml中添加配置项：(xxxx为屏蔽信息)
 
-   ```xml
-   <!--公司私库信息添加在servers节点内-->
-   <server>
-          <id>releases</id>
-          <username>xxxx</username>
-          <password>xxxx</password>
-   </server>
-   ```
+     ```xml
+        <!--公司私库信息添加在servers节点内-->
+        <server>
+               <id>releases</id>
+               <username>xxxx</username>
+               <password>xxxx</password>
+        </server>
+     ```
 
-   
-   
-   ```xml
-   <!--公司私库信息添加在mirrors节点内-->
-   <mirror>  
-      <id>releases</id>  
-      <name>internal nexus repository</name>  
-      <url>http://123.56.23.53:8081/nexus/content/groups/public/</url>
-      <mirrorOf>*</mirrorOf>  
-   </mirror>
-   ```
-   
-2. 项目地址：https://github.com/buwangchuxinlijing/log-sys
+     ```xml
+        <!--公司私库信息添加在mirrors节点内-->
+        <mirror>  
+           <id>releases</id>  
+           <name>internal nexus repository</name>  
+           <url>http://123.56.23.53:8081/nexus/content/groups/public/</url>
+           <mirrorOf>*</mirrorOf>  
+        </mirror>
+     ```
+
+  2. 在项目pom.xml中添加配置项：
+
+     ```
+     <repositories>
+         <repository>
+             <id>releases</id>
+             <url>http://xxxx:xxxx@123.56.23.53:8081/nexus/content/repositories/releases/</url>
+         </repository>
+     </repositories>
+     ```
+
+* 项目地址：https://github.com/buwangchuxinlijing/log-sys
