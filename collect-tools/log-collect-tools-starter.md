@@ -77,6 +77,8 @@ log:
    </server>
    ```
 
+   
+   
    ```xml
    <!--公司私库信息添加在mirrors节点内-->
    <mirror>  
