@@ -1,0 +1,20 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+target/
+build/
+bin/
+logs/
+.idea_modules/
+.gradle/
+*.zip
+*.bak

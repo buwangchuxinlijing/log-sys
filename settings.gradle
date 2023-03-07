@@ -1,0 +1,4 @@
+rootProject.name = 'log-sys'
+include 'collect-tools'
+include 'app'
+

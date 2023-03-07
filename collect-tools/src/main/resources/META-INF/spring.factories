@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.log.collect.tools.log.LogAutoConfig\
+  ,com.log.collect.tools.filter.log.LogFilterTypeAutoConfig,com.log.collect.tools.filter.wrapper.WrapperFilterAutoConfig
