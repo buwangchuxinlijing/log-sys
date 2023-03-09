@@ -12,10 +12,9 @@ import org.springframework.context.annotation.Bean;
  * @date 2023/2/22 9:23
  */
 @AutoConfiguration
-@ConditionalOnProperty(prefix = "log.collect", name = "open", havingValue = "true")
+@ConditionalOnProperty(prefix = "log.collect", name = "read-request", havingValue = "true")
 public class WrapperFilterAutoConfig {
     @Bean
-    @ConditionalOnProperty(prefix = "log.collect", name = "read-request", havingValue = "true")
     public FilterRegistrationBean<HttpWrapperFilter> httpWrapperFilterFilterRegistrationBean(){
         FilterRegistrationBean<HttpWrapperFilter> registrationBean=new FilterRegistrationBean<>();
         registrationBean.setName("custom-Name:HttpWrapperFilter");

@@ -23,16 +23,7 @@ public class AppApplication {
         SpringApplication.run(AppApplication.class,args);
     }
 
-    @Bean
-    public ApplicationListener fun(){
-        return new ApplicationListener<ApplicationStartedEvent>(){
 
-            @Override
-            public void onApplicationEvent(ApplicationStartedEvent event) {
-                System.out.println(LogAutoConfig.COLLECT_LOGGER);
-            }
-        };
-    }
     @Bean
     public LogUserInfoObtain LogUserInfoObtainBean(){
         return new LogUserInfoObtain<UserModel<UserRoleInfo>>(){

@@ -24,7 +24,7 @@ import java.util.List;
  */
 @AutoConfiguration(after = WrapperFilterAutoConfig.class)
 @Import(LogConfigProperties.class)
-@ConditionalOnProperty(prefix = "log.collect", name = "open", havingValue = "true")
+@ConditionalOnProperty(prefix = "log.collect", name = "type", havingValue = "filter")
 public class LogFilterTypeAutoConfig {
   /*  @Autowired(required = false)
     LogUserInfoObtain logUserInfoObtain;*/
@@ -40,9 +40,7 @@ public class LogFilterTypeAutoConfig {
         };
     }
 
-
     @Bean
-    @ConditionalOnProperty(prefix = "log.collect", name = "type", havingValue = "filter")
     public FilterRegistrationBean<LogFilter> logFilterFilterRegistrationBean(LogConfigProperties logConfigProperties,
                                                                              LogUserInfoObtain logUserInfoObtain){
         FilterRegistrationBean<LogFilter> registrationBean=new FilterRegistrationBean<>();

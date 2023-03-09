@@ -68,7 +68,7 @@ public class LogFilter implements Filter {
                 requestURL+="?"+query;
             }
             //请求行 url
-            sj.add(requestURL );
+            sj.add(requestURL + " " + httpServletRequest.getMethod());
             //请求头
             sj.add(objectMapper.writeValueAsString(headMap));
             //请求体
