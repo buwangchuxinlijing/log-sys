@@ -155,6 +155,18 @@ public LogUserInfoObtain LogUserInfoObtainBean(){
    proxyObj.execute(httpPost);
    ```
 
+### 4. 结果展示
+
+日志打印如下：
+
+```tex
+2023-03-09 16:16:22.067 - CloseableHttpClient - public org.apache.http.client.methods.CloseableHttpResponse org.apache.http.impl.client.CloseableHttpClient.execute(org.apache.http.client.methods.HttpUriRequest) throws java.io.IOException,org.apache.http.client.ClientProtocolException - POST http://127.0.0.1:8095/api/test HTTP/1.1 - {} - 数据数据数据数据数据 - before - 8a46b322-5e6d-40ef-9f50-b1dcfa8cac7c
+2023-03-09 16:16:22.199 - http://127.0.0.1:8095/api/test POST - {"content-length":"30","host":"127.0.0.1:8095","content-type":"text/plain; charset=UTF-8","connection":"Keep-Alive","accept-encoding":"gzip,deflate","user-agent":"Apache-HttpClient/4.5.13 (Java/1.8.0_73)"} - 数据数据数据数据数据 - {"userName":"test22","nickname":"测试用户","roleModel":{"code":"ADMIN","name":"管理员"}} - 286c5a53-35fe-4bc2-b2f2-4762ea9dad1f
+2023-03-09 16:16:22.322 - http://127.0.0.1:8095/api/test 200 - {"Keep-Alive":"timeout=60","Connection":"keep-alive","Content-Length":"16","Date":"Thu, 09 Mar 2023 08:16:22 GMT","Content-Type":"text/plain;charset=UTF-8"} - TEST hello world - {"userName":"test22","nickname":"测试用户","roleModel":{"code":"ADMIN","name":"管理员"}} - 286c5a53-35fe-4bc2-b2f2-4762ea9dad1f
+2023-03-09 16:16:22.330 - CloseableHttpClient - public org.apache.http.client.methods.CloseableHttpResponse org.apache.http.impl.client.CloseableHttpClient.execute(org.apache.http.client.methods.HttpUriRequest) throws java.io.IOException,org.apache.http.client.ClientProtocolException - HTTP/1.1 200  - {"Keep-Alive":"timeout=60","Connection":"keep-alive","Content-Length":"16","Date":"Thu, 09 Mar 2023 08:16:22 GMT","Content-Type":"text/plain;charset=UTF-8"} - TEST hello world - after - 8a46b322-5e6d-40ef-9f50-b1dcfa8cac7c
+
+```
+
 
 
 ### 说明项
