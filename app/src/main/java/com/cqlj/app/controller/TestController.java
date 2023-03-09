@@ -16,7 +16,7 @@ public class TestController {
 
     @PostMapping("/api/test")
     protected String test(String code, HttpServletRequest request){
-        okta(null,null);
+        System.out.println("执行方法test");
         return "TEST hello world";
     }
 
@@ -32,7 +32,6 @@ public class TestController {
 //http://localhost:8085/oauth2/authorize?client_id=messaging-client&response_type=code&scope=openid&redirect_uri=http://127.0.0.1:8085/authorized/okta
     @GetMapping("/authorized/okta")
     protected String okta(String code, HttpServletRequest request){
-        System.out.println(2);
         return "hello world";
     }
 
