@@ -1,10 +1,7 @@
 package com.cqlj.app.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.log.collect.tools.log.LogAutoConfig;
 import com.log.collect.tools.proxy.cglib.LogCollectProxyOfCglib;
 import com.log.collect.tools.proxy.cglib.print.JsonPrintOfJackson;
-import lombok.SneakyThrows;
 import org.apache.http.Consts;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -21,17 +18,8 @@ import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.xml.bind.DatatypeConverter;
-import java.io.BufferedInputStream;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringJoiner;
@@ -98,7 +86,7 @@ public class ConcurrentInterface {
                 new RuntimeException(e);
             }
             Function<Object,String> objJson=JsonPrintOfJackson::print ;
-            StringJoiner sj=new StringJoiner(" - ");
+            StringJoiner sj=new StringJoiner(" -- ","{","}");
             sj.add(requestLine);
             sj.add( objJson.apply(headersMap));
             sj.add(body);
@@ -123,7 +111,7 @@ public class ConcurrentInterface {
                 new RuntimeException(e);
             }
             Function<Object,String> objJson=JsonPrintOfJackson::print ;
-            StringJoiner sj=new StringJoiner(" - ");
+            StringJoiner sj=new StringJoiner(" -- ","{","}");
             sj.add(requestLine);
             sj.add( objJson.apply(headersMap));
             sj.add(body);

@@ -5,7 +5,6 @@ import com.log.collect.tools.filter.wrapper.response.CustomHttpServletResponseWr
 import com.log.collect.tools.log.LogAutoConfig;
 import com.log.collect.tools.user.LogUserInfoObtain;
 import com.log.collect.tools.user.UserModel;
-import org.springframework.util.AntPathMatcher;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +14,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author lij
- * @description: TODO
+ * @description: 使用过滤器实现日志收集
  * @date 2023/3/1 16:05
  */
 public class LogFilter implements Filter {
@@ -25,7 +24,6 @@ public class LogFilter implements Filter {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    private AntPathMatcher pathMatcher = new AntPathMatcher();
 
 
     public LogFilter(LogUserInfoObtain logUserInfo) {

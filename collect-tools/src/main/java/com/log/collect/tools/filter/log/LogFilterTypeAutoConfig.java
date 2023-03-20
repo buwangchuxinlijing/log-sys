@@ -5,7 +5,6 @@ import com.log.collect.tools.filter.wrapper.WrapperFilterAutoConfig;
 import com.log.collect.tools.configure.LogConfigProperties;
 import com.log.collect.tools.user.UserModel;
 import com.log.collect.tools.user.UserRoleInfo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

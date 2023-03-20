@@ -1,4 +1,4 @@
-package com.log.collect.tools.log.log4j;//package com.cqucc.server.auth.config.log;
+package com.log.collect.tools.log.log4j;
 
 import com.log.collect.tools.configure.LogConfigProperties;
 import com.log.collect.tools.spring.SpringBeanContext;
@@ -85,4 +85,5 @@ public class Log4jConfiguration {
         config.addLogger("LOG_COLLECT_LOGGER", loggerConfig);
         ctx.updateLoggers();
     }
+
 }

@@ -1,6 +1,5 @@
 package com.log.collect.tools.log;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.log.collect.tools.configure.LogConfigProperties;
 import com.log.collect.tools.filter.log.LogFilterTypeAutoConfig;
 import com.log.collect.tools.log.log4j.Log4jConfiguration;
